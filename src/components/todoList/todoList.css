@@ -1,0 +1,14 @@
+.todoList-container {
+    margin: 30px 0px;
+  
+    padding: 5px 5px;
+    width: 90%;
+    height: 300px;
+    overflow: auto;
+  }
+  .errorMessage{
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: #696969;
+  }
