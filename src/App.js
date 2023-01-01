@@ -37,7 +37,6 @@ function App() {
 
   const handleInputSubmit = (e) => {
     e.preventDefault();
-    console.log("e.target.id : ", e.target.id);
     if (e.target.id === "todo-add-form") {
       const newTodo = {
         id: uuidv4(),
@@ -60,10 +59,13 @@ function App() {
   };
 
   const removeTodo = (id) => {
-    const updatedTodos = todos.filter((todo) => {
-      return todo.id !== id;
-    });
-    setTodos(updatedTodos);
+    let message = "Are you sure want to delete?";
+    if (window.confirm(message)) {
+      const updatedTodos = todos.filter((todo) => {
+        return todo.id !== id;
+      });
+      setTodos(updatedTodos);
+    }
   };
 
   const completedTodos = (id) => {
@@ -78,7 +80,6 @@ function App() {
   };
 
   const toggleEditMode = (id) => {
-    console.log("toggleEditMode id : ", id);
     const todo = todos.find((todo) => {
       return todo.id === id;
     });
