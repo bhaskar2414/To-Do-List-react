@@ -14,17 +14,14 @@ function App() {
   const [editTodoId, setEditTodoId] = useState("");
 
   useEffect(() => {
-    console.log("useEffect-1 fired ");
     const todosJSON = localStorage.getItem("todos");
     const todosRetrieved = JSON.parse(todosJSON);
-    console.log(todosJSON);
     if (todosRetrieved && todosRetrieved.length > 0) {
       setTodos(todosRetrieved);
     }
   }, []);
 
   useEffect(() => {
-    console.log("useEffect-2 fired ");
     const todosJSON = JSON.stringify(todos);
     localStorage.setItem("todos", todosJSON);
     console.log(todosJSON);

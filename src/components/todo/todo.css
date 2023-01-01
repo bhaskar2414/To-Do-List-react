@@ -1,6 +1,6 @@
 .todo-container {
     display: flex;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 15px 0px;
     border: 1px solid grey;
     
@@ -24,6 +24,7 @@
     width: 270px;
     word-break: break-word;
     align-self: center;
+    color: #696969;
   }
   
   .todo-btn {
@@ -38,11 +39,17 @@
     height: 20px;
     width: 20px;
     cursor: pointer;
+
   }
   .icon {
     height: 100%;
     width: 100%;
+  }
+  .edit-btn {
     color: #095bfe;
+  }
+  .delete-btn {
+    color: #d3432a;
   }
   .completed {
     text-decoration: line-through black;
